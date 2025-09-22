@@ -80,3 +80,7 @@ Button(app, text="Agregar", command=agregar_p).grid(pady=5)
 Button(app, text="Modificar", command=modificar_p).grid(pady=5)
 Button(app, text="Eliminar", command=eliminar_p).grid(pady=5)
 Button(app, text="Limpiar", command=limpiar).grid(pady=5)
+
+mostrar_p()
+app.mainloop()
+baseDeDatos.close()
