@@ -75,3 +75,8 @@ entry_precio = Entry(app); entry_precio.grid()
 
 Label(app, text="Stock").grid()
 entry_stock = Entry(app); entry_stock.grid()
+
+Button(app, text="Agregar", command=agregar_p).grid(pady=5)
+Button(app, text="Modificar", command=modificar_p).grid(pady=5)
+Button(app, text="Eliminar", command=eliminar_p).grid(pady=5)
+Button(app, text="Limpiar", command=limpiar).grid(pady=5)
