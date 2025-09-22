@@ -28,5 +28,13 @@ def agregar_p():
     limpiar()
 
 
+def eliminar_p():
+    s = t.selection()
+    if s:
+        id = t.item(s[0])["values"][0]
+        cr.execute("DELETE FROM productos WHERE id=?", (id,))
+        baseDeDatos.commit()
+        mostrar_p()
+        limpiar()
 
 
