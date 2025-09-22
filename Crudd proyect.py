@@ -52,3 +52,26 @@ def limpiar():
     entry_precio.delete(0, END)
     entry_stock.delete(0, END)
 
+#Interfaz
+
+app = Tk()
+app.title("CRUD Tabla De Productos")
+app.geometry("400x500")
+
+t = ttk.Treeview(app, columns=("ID", "Nombre", "Precio", "Stock"), show="headings")
+ 
+for c in ("ID","Nombre","Precio","Stock"):
+    t.heading(c, text=c)
+    t.grid(pady=10)
+
+Label(app, text="ID").grid()
+entry_id = Entry(app); entry_id.grid()
+
+Label(app, text="Nombre").grid()
+entry_nombre = Entry(app); entry_nombre.grid()
+
+Label(app, text="Precio").grid()
+entry_precio = Entry(app); entry_precio.grid()
+
+Label(app, text="Stock").grid()
+entry_stock = Entry(app); entry_stock.grid()
