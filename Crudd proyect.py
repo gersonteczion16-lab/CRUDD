@@ -20,5 +20,13 @@ def mostrar_p():
         t.insert("", "end", values=fila)
 
 
+def agregar_p():
+    cr.execute("INSERT INTO productos VALUES (?, ?, ?, ?)", 
+                (entry_id.get(), entry_nombre.get(), entry_precio.get(), entry_stock.get()))
+    baseDeDatos.commit()
+    mostrar_p()
+    limpiar()
+
+
 
 
