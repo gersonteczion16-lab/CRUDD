@@ -37,4 +37,12 @@ def eliminar_p():
         mostrar_p()
         limpiar()
 
+def modificar_p():
+    s = t.selection()
+    if s:
+        cr.execute("UPDATE productos SET nombre=?, precio=?, stock=? WHERE id=?",
+                    (entry_nombre.get(), entry_precio.get(), entry_stock.get(), entry_id.get()))
+        baseDeDatos.commit()
+        mostrar_p()
+        limpiar()
 
