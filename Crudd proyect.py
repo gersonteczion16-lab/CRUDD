@@ -46,3 +46,9 @@ def modificar_p():
         mostrar_p()
         limpiar()
 
+def limpiar():
+    entry_id.delete(0, END)
+    entry_nombre.delete(0, END)
+    entry_precio.delete(0, END)
+    entry_stock.delete(0, END)
+
